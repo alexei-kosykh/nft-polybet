@@ -1,0 +1,65 @@
+@import 'common';
+@import 'blocks';
+
+body {
+  background-color: #000000;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  background-color: #000000;
+  max-width: 1400px;
+  width: 100%;
+  // overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  border-radius: 10px;
+
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+a[target='_blank'] {
+  cursor: default;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'PoppinsR', sans-serif;
+  line-height: 23px;
+}
+
+h1 {
+  font-size: 90px;
+  font-family: 'InterB', sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 48px;
+  font-family: 'PoppinsE', sans-serif;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 40px;
+  font-family: 'PoppinsB', sans-serif;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 32px;
+  line-height: 46px;
+  font-family: 'PoppinsB', sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
