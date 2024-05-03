@@ -236,7 +236,7 @@ h6 {
 }
 
 .nft-holder {
-  padding: 100px 90px;
+  padding: 100px 90px 0;
 }
 .nft-holder h1 {
   text-align: center;
@@ -251,8 +251,8 @@ h6 {
   display: flex;
   padding: 20px;
   gap: 30px;
-  background: rgb(24, 24, 24);
-  background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgb(0, 0, 0) 100%);
+  background: rgb(33, 33, 33);
+  background: linear-gradient(126deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
   border: 1px solid rgb(61, 61, 61);
   border-radius: 10px;
 }
@@ -262,6 +262,25 @@ h6 {
 }
 .nft-holder .section__card-holder p {
   color: #9E9DFE;
+}
+
+.nft-structure {
+  padding: 100px 90px;
+}
+.nft-structure > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nft-structure h1,
+.nft-structure h6 {
+  margin-bottom: 50px;
+}
+.nft-structure h6 {
+  color: #9e9dfe;
+}
+.nft-structure h6 + img {
+  margin-bottom: 30px;
 }
 
 .button {
@@ -435,6 +454,14 @@ h4 {
 h5 {
   font-size: 32px;
   line-height: 46px;
+  font-family: "PoppinsB", sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 36px;
   font-family: "PoppinsB", sans-serif;
   margin-bottom: 30px;
   text-transform: uppercase;

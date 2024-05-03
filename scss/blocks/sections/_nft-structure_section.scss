@@ -1,0 +1,22 @@
+.nft-structure {
+  padding: 100px 90px;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1,
+  h6 {
+    margin-bottom: 50px;
+  }
+
+  h6 {
+    color: #9e9dfe;
+  }
+
+  h6 + img {
+    margin-bottom: 30px;
+  }
+}
