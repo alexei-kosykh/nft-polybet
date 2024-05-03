@@ -1,0 +1,40 @@
+.nft-token {
+  padding: 0 100px 90px;
+
+  h1 {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &>div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-token {
+    padding: 25px;
+    width: 384px;
+    border: 1px solid #282828;
+    border-radius: 20px;
+    background: rgb(33, 33, 33);
+    background: linear-gradient(
+      126deg,
+      rgba(33, 33, 33, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    h6 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #9e9dfe;
+    }
+
+    ul {
+      margin-left: 25px;
+      line-height: 24px;
+      font-size: 16px;
+    li {
+      list-style: disc;
+    }}
+  }
+}
