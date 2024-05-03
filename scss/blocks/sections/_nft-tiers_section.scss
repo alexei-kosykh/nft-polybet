@@ -1,0 +1,71 @@
+.nft-tiers {
+  padding: 50px 100px 90px;
+
+  h1 {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+ &> div {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 384px;
+      height: 639px;
+      border-radius: 32px;
+      background: rgb(33, 33, 33);
+      background: linear-gradient(
+        126deg,
+        rgba(33, 33, 33, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+
+      &-info {
+        padding: 20px 30px;
+      }
+
+      &-tag {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      &-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        p {
+          font-size: 14px;
+          font-family: 'PoppinsB', sans-serif;
+        }
+
+        p:first-of-type {
+          color: #C8C8C8;
+          margin-right: 10px;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        p:last-of-type {
+          color: #9E9DFE;
+          margin-left: 3px;
+        }
+      }
+
+      .section__button_white {
+            // padding: 25px 30px;
+            height: 50px;
+            width: 100%;
+          }
+    }
+
+  }
+}

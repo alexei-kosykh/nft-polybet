@@ -283,6 +283,60 @@ h6 {
   margin-bottom: 30px;
 }
 
+.nft-tiers {
+  padding: 50px 100px 90px;
+}
+.nft-tiers h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.nft-tiers h5 {
+  text-transform: uppercase;
+}
+.nft-tiers > div {
+  display: flex;
+  justify-content: space-between;
+}
+.nft-tiers > div .card {
+  width: 384px;
+  height: 639px;
+  border-radius: 32px;
+  background: rgb(33, 33, 33);
+  background: linear-gradient(126deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
+}
+.nft-tiers > div .card-info {
+  padding: 20px 30px;
+}
+.nft-tiers > div .card-tag {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.nft-tiers > div .card-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.nft-tiers > div .card-price p {
+  font-size: 14px;
+  font-family: "PoppinsB", sans-serif;
+}
+.nft-tiers > div .card-price p:first-of-type {
+  color: #C8C8C8;
+  margin-right: 10px;
+}
+.nft-tiers > div .card-price img {
+  width: 16px;
+  height: 16px;
+}
+.nft-tiers > div .card-price p:last-of-type {
+  color: #9E9DFE;
+  margin-left: 3px;
+}
+.nft-tiers > div .card .section__button_white {
+  height: 50px;
+  width: 100%;
+}
+
 .button {
   border-radius: 10px;
   display: flex;
@@ -452,10 +506,9 @@ h4 {
 }
 
 h5 {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 46px;
   font-family: "PoppinsB", sans-serif;
-  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
