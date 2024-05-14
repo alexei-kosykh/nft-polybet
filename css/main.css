@@ -291,6 +291,16 @@ h6 {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 576px) {
+  .nft-main > div > div:last-of-type > img:first-of-type {
+    right: -70px;
+    width: 351px;
+  }
+  .nft-main > div > div:last-of-type > img:last-of-type {
+    right: 45px;
+    width: 387px;
+  }
+}
 .nft-holder {
   padding: 100px 90px 0;
   margin-bottom: 60px;
@@ -323,13 +333,10 @@ h6 {
 }
 .nft-holder .section__card-holder p {
   font-family: "InterR", sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
-  .nft-holder {
-    padding: 70px 30px 0;
-  }
   .nft-holder h1 {
     text-align: left;
     margin-bottom: 50px;
@@ -345,8 +352,14 @@ h6 {
     font-size: 16px;
   }
 }
+@media (max-width: 768px) {
+  .nft-holder {
+    padding: 70px 30px 0;
+  }
+}
 .nft-structure {
   padding: 100px 90px;
+  position: relative;
 }
 .nft-structure > div {
   display: flex;
@@ -376,6 +389,9 @@ h6 {
     align-items: flex-start;
     flex-direction: column;
   }
+  .nft-structure > div > div {
+    width: 100%;
+  }
   .nft-structure > div .mobile_card {
     display: block;
     margin-bottom: 30px;
@@ -384,15 +400,24 @@ h6 {
     display: none;
   }
   .nft-structure > div .table {
-    overflow-x: auto;
+    position: relative;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     margin-bottom: 30px;
   }
   .nft-structure > div .table::-webkit-scrollbar {
     width: 0;
   }
+  .nft-structure > div .table img {
+    max-width: none;
+    width: 680px;
+    height: auto;
+  }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .nft-structure {
     padding: 70px 30px 0;
   }
@@ -404,6 +429,7 @@ h6 {
 }
 .nft-tiers {
   padding: 50px 100px 90px;
+  position: relative;
 }
 .nft-tiers h1 {
   margin-bottom: 50px;
@@ -461,22 +487,25 @@ h6 {
     height: 850px;
   }
   .nft-tiers > div {
-    position: absolute;
+    position: relative;
+    margin: 0 -5vw;
     left: 0;
     overflow-x: auto;
     -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .nft-tiers > div::-webkit-scrollbar {
     width: 0;
   }
 }
 @media (max-width: 1024px) {
-  .nft-tiers {
-    padding: 70px 30px;
-    margin-bottom: 50px;
-  }
   .nft-tiers h1 {
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .nft-tiers {
+    padding: 70px 30px;
   }
 }
 .nft-token {
@@ -514,12 +543,18 @@ h6 {
 }
 
 @media (max-width: 1024px) {
-  .nft-structure h1 {
+  .nft-token h1, .nft-token > p {
     text-align: left;
+  }
+  .nft-token > div {
+    flex-direction: column;
+  }
+  .nft-token > div .card-token {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .nft-structure {
+  .nft-token {
     padding: 70px 30px 0;
   }
 }
@@ -529,8 +564,23 @@ h6 {
   flex-direction: column;
   justify-content: center;
 }
-.nft-collage > div {
+.nft-collage__block {
+  display: grid;
+  grid-template: 1fr 1fr/repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
   margin-bottom: 70px;
+}
+.nft-collage__block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nft-collage__block_red {
+  margin: 0 auto;
+  grid-row: span 2;
+  grid-column: span 2;
 }
 .nft-collage button {
   align-self: center;
@@ -538,6 +588,53 @@ h6 {
   margin-bottom: 90px;
 }
 
+@media (max-width: 768px) {
+  .nft-collage {
+    padding: 70px 30px 150px;
+  }
+  .nft-collage__block {
+    grid-template: repeat(10, 1fr)/repeat(6, 1fr);
+    grid-template-areas: "p p r r r r" "p p r r r r" "g g r r r r" "g g r r r r" "w w w b b b" "w w w b b b" "w w w b b b" "y y y sm-r sm-r sm-r" "y y y sm-r sm-r sm-r" "y y y sm-r sm-r sm-r";
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .nft-collage__block img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .nft-collage__block_pink {
+    grid-area: p;
+  }
+  .nft-collage__block_white {
+    grid-area: w;
+  }
+  .nft-collage__block_green {
+    grid-area: g;
+  }
+  .nft-collage__block_red {
+    grid-area: r;
+  }
+  .nft-collage__block_black {
+    grid-area: b;
+  }
+  .nft-collage__block_yellow {
+    grid-area: y;
+  }
+  .nft-collage__block_sm-red {
+    grid-area: sm-r;
+  }
+  button {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .nft-collage {
+    padding-bottom: 140px;
+  }
+}
 .button {
   border-radius: 10px;
   display: flex;
@@ -626,6 +723,14 @@ footer > div a span {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+  }
+}
 @media (max-width: 576px) {
   footer {
     bottom: 20px;
@@ -638,6 +743,7 @@ footer > div a span {
   footer > div, footer > div a {
     font-size: 15px;
     letter-spacing: -0.3px;
+    max-width: 150px;
   }
 }
 @media (max-width: 393px) {

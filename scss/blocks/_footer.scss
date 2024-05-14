@@ -55,6 +55,15 @@ footer {
   }
 }
 
+@include tablet() {
+  footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+  }
+}
+
 @include mobile() {
   footer {
     bottom: 20px;
@@ -63,12 +72,14 @@ footer {
     p {
       font-size: 12px;
       letter-spacing: -0.24px;
+
     }
 
     & > div,
     & > div a {
       font-size: 15px;
       letter-spacing: -0.3px;
+      max-width: 150px;
     }
   }
 }

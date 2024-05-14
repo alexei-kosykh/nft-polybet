@@ -1,5 +1,6 @@
 .nft-structure {
   padding: 100px 90px;
+  position: relative;
 
   & > div {
     display: flex;
@@ -35,6 +36,10 @@
       align-items: flex-start;
       flex-direction: column;
 
+      &>div {
+        width: 100%;
+      }
+
       .mobile_card {
         display: block;
         margin-bottom: 30px;
@@ -45,21 +50,33 @@
       }
 
       .table {
-        overflow-x: auto;
+        position: relative;
+        display: flex;
+        overflow: auto;
+        width: 100%;
+        scrollbar-width: none;
         -ms-overflow-style: none;
+
         &::-webkit-scrollbar {
           width: 0;
         }
         margin-bottom: 30px;
+
+
+        img {
+          max-width: none;
+          width: 680px;
+          height: auto;
+        }
       }
     }
   }
 }
 
-@include laptop() {
+@include tablet() {
   .nft-structure {
     padding: 70px 30px 0;
-   
+
   }
 }
 
