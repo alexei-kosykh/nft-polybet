@@ -4,11 +4,18 @@
   }
 }
 
+@mixin desktop-1360() {
+  @media (max-width: $breakpoint_x) {
+    @content;
+  }
+}
+
 @mixin desktop() {
   @media (max-width: $breakpoint_xl) {
     @content;
   }
 }
+
 
 @mixin laptop() {
   @media (max-width: $breakpoint_lg) {

@@ -10,9 +10,9 @@
     text-transform: uppercase;
   }
 
- &> div {
+  & > div {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 
     .card {
       width: 384px;
@@ -45,7 +45,7 @@
         }
 
         p:first-of-type {
-          color: #C8C8C8;
+          color: #c8c8c8;
           margin-right: 10px;
         }
 
@@ -55,17 +55,43 @@
         }
 
         p:last-of-type {
-          color: #9E9DFE;
+          color: #9e9dfe;
           margin-left: 3px;
         }
       }
 
       .section__button_white {
-            // padding: 25px 30px;
-            height: 50px;
-            width: 100%;
-          }
+        // padding: 25px 30px;
+        height: 50px;
+        width: 100%;
+      }
     }
+  }
+}
+
+@include desktop-1360() {
+  .nft-tiers {
+    height: 850px;
+    & > div {
+      position: absolute;
+      left: 0;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}
+
+@include laptop() {
+  .nft-tiers {
+    padding: 70px 30px;
+    margin-bottom: 50px;
+    h1 {
+      text-align: left;
+    }
+
 
   }
 }

@@ -1,5 +1,6 @@
 .nft-holder {
   padding: 100px 90px 0;
+  margin-bottom: 60px;
 
   h1 {
     text-align: center;
@@ -9,27 +10,64 @@
   .section {
     &__group-holder {
       display: grid;
-      gap: 20px;
-      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      gap: 50px 20px;
+      grid-template: repeat(2, 1fr) / repeat(6, 1fr);
     }
 
     &__card-holder {
       display: flex;
-      padding: 20px;
-      gap: 30px;
-      background: rgb(33,33,33);
-      background: linear-gradient(126deg, rgba(33,33,33,1) 0%, rgba(0,0,0,1) 100%);
-      border: 1px solid rgb(61, 61, 61);
-      border-radius: 10px;
+      align-items: center;
+      padding: 20px 15px;
+      gap: 25px;
+      background: linear-gradient(
+        126deg,
+        rgba(33, 33, 33, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      border: 1px solid rgb(43, 43, 43);
+      border-radius: 20px;
+
+
+        grid-column: span 2;
+
+        &:nth-child(4) {
+          grid-column: 2/span 2;
+        }
 
       img {
-        width: 48px;
-        height: 48px;
+        width: 72px;
+        height: 72px;
       }
 
       p {
-        color: #9E9DFE;
+        font-family: 'InterR', sans-serif;
+        color: #FFFFFF;
       }
     }
   }
+}
+
+@include laptop() {
+.nft-holder{
+  padding: 70px 30px 0;
+  h1 {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  .section{
+    &__group-holder {
+      gap:20px;
+      grid-template: repeat(5, 1fr) / 1fr;
+    }
+    &__card-holder {
+      &:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 }

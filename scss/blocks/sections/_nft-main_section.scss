@@ -9,16 +9,19 @@
     flex-direction: column;
     align-items: flex-start;
 
-    &>img {
+    & > div:last-of-type {
       position: absolute;
-
-      &:first-of-type {
-        right: 0;
-        z-index: 10;
-      }
-      &:last-of-type {
-        right: 300px;
-        z-index: 5;
+      right: 0;
+      img {
+        position: absolute;
+        &:first-of-type {
+          right: 0;
+          z-index: 10;
+        }
+        &:last-of-type {
+          right: 300px;
+          z-index: 5;
+        }
       }
     }
 
@@ -42,7 +45,6 @@
         padding: 10px 30px;
         margin-bottom: 20px;
       }
-
 
       // &_progress-wrap {
       //   height: 40px;
@@ -82,5 +84,77 @@
       //   width: 70%;
       // }
     }
+  }
+}
+
+@include desktop-1360() {
+  .nft-main {
+    padding-bottom: 50px;
+    & > div {
+      & > div:last-of-type {
+        & > img {
+          &:first-of-type {
+            right: 0;
+            z-index: 10;
+            width: 407px;
+          }
+          &:last-of-type {
+            right: 130px;
+            width: 450px;
+            z-index: 5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include laptop() {
+  .nft-main {
+    p {
+      max-width: 400px;
+    }
+  }
+}
+
+@include tablet() {
+  .nft-main {
+    padding: 70px 30px 0;
+    width: 100%;
+
+    p {
+      max-width: 100%;
+    }
+
+    & > div {
+      flex-direction: column;
+      width: 100%;
+
+      & > div:last-of-type {
+        display: flex;
+        position: static;
+        height: 450px;
+        & > img {
+          &:last-of-type {
+            position: absolute;
+            right: 130px;
+            width: 450px;
+            z-index: 5;
+          }
+        }
+      }
+    }
+
+    .section {
+      &__button {
+        &_white {
+          width: 100%;
+          margin-bottom: 60px;
+        }
+
+        &_violet {
+          padding: 10px 30px;
+          margin-bottom: 20px;
+        }}}
   }
 }

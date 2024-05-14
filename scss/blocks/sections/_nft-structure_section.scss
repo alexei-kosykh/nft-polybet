@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .mobile_card {
+      display: none;
+    }
   }
 
   h1,
@@ -18,5 +22,53 @@
 
   h6 + img {
     margin-bottom: 30px;
+  }
+}
+
+@include desktop() {
+  .nft-structure {
+    h1,
+    h6 {
+      margin-bottom: 30px;
+    }
+    & > div {
+      align-items: flex-start;
+      flex-direction: column;
+
+      .mobile_card {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .desk_card {
+        display: none;
+      }
+
+      .table {
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@include laptop() {
+  .nft-structure {
+    padding: 70px 30px 0;
+   
+  }
+}
+
+@include mobile() {
+  .nft-structure {
+    & > div {
+      .mobile_card{
+        width: 83vw;
+      }
+    }
   }
 }
