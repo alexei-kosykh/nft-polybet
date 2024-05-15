@@ -164,15 +164,42 @@
 @include mobile() {
   .nft-main {
     & > div {
+      .section__progress-bar {
+        img {
+          width: 100%;
+        }
+      }
       & > div:last-of-type {
+
+        height: 380px;
         & > img {
           &:first-of-type {
-            right: -70px;
+            right: 0px;
             width: 351px;
           }
           &:last-of-type {
-            right: 45px;
+            right: 98px;
             width: 387px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile-only() {
+  .nft-main {
+    & > div {
+      & > div:last-of-type {
+        height: 230px;
+        & > img {
+          &:first-of-type {
+            right: 0px;
+            width: 200px;
+          }
+          &:last-of-type {
+            right: 78px;
+            width: 222px;
           }
         }
       }
